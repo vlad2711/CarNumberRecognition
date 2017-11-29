@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.1"
+    defaultConfig {
+        applicationId "com.kram.vlad.carnumberrecognition"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //support
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+    //butterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //gson
+    implementation 'org.immutables:gson:2.6.0.alpha0'
+
+    implementation 'net.trippedout:cloudvisionlib:0.1.0'
+
+    //cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.+'
+}
